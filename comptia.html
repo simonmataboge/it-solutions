@@ -1,0 +1,151 @@
+
+                    <b><p>Comptia A+</p></b>
+
+                        Features of microsoft,Mac OSX and Linux,troubleshooting,security concepts<br/>
+                        Shell and Terminal commands for Mac OSX or Linux<br/>
+                        Windows application,Utilities,Management,Features,Security and installations<br/>
+                        Motherboards,CPU,Printers,Display devices,Different Computer Form Factors<br/>
+                        Network Protocols and cabling,Connectors and Connections,Inernet connections<br/>
+                        Wireless Nettworking,Broadband Routers,Mobile Computing<br/>
+
+                    <b><p>Administration</p></b>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Thank you</title>
+      <style type="text/css">
+          body{
+              background: #f6f6f6;
+          }
+          .container{
+              background: #f6f6f6;
+              position: absolute;
+              top:50%;
+              left:50%;
+              transform: translateX(-50%) translateY(-50%);
+              width: 500px;
+              padding:20px;
+              box-shadow:0 0 10px 0 #ccc;
+          }
+          .container textarea{
+              width: 490px;
+              height: 200px;
+              resize: none;
+              outline: none;
+              border: 1px solid #ccc;
+          }
+          .container label{
+              display: block;
+              width: 400px;
+          }
+          .container label span{
+              width: 100px;
+              margin-top:20px;
+              display: inLine-block;
+
+          }
+          .container label select, .container label input{
+               width: 290px;
+          }
+          .button{
+              display: inLine-block;
+              background: #f6f6f6;
+              padding: 10px 20px;
+              color: #000;
+              border:1px solid #ccc;
+              cursor: pointer;
+              margin-top: 20px;
+          }
+          .button:hover{
+              box-shadow: 4px 4px 10px 0 #ccc:
+          }
+      </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3>Thank you </h3>
+            <div>
+
+
+
+            </div>
+            <textarea id="myText" <p>Princes and princess must trod out of Egypt<br>Ethiopia now strech forth
+                                      their hands to Jah Rastafari King Haile Selassie I the first. Sillah<br> O I Jah of Ethiopia I and I Irvine majesty thy irits trod unto I to dwell in the path of righteousness lead I and I<br>
+                                      Help I and I to forgive that I and I must be forgiven<br>Teach I and I love loyalty on earth as it is in Zion<br>Endure I and I with wise mind knowledge and overstanding to do thy will thy blessing to I and I oh Jah Rastafari King Haile Selassie I the first. Sillah<br>
+                                      Let the hungry be fed,the naked clothed,sick narished,aged protected and he infants cared for<br>Deliver I and I from the hands of I and I enemies that I and I must prove fruitful in the perilous days<br>
+                                      When I and I enemies are passed and decayed in the depts of the sea,in depts of the earth or in the belly of the beast<oh>Oh give I a place in thy ever living kingdom<br>Through the powers of the King of Kings Lord of lords,the conquering lion of tribe of Judah
+                                      Ilect of Himself and the light of this earth<br>I and I Irvine majesty Haile Selassie I Jah Rastafari King Haile Selassie I the first. Sillah<br>First King of Iration,Jah art the Alpha and Omega,the beginning without an end,the first and forever the protectorite of all
+                                      human faith and the ruler of the universe so I and I Haile to I and I Jah Rastafari King Haile Selassie I the first. Sillah<br>And King Emperor Haile Selassie I Jah Rastafari King Haile Selassie I the first. Sillah<br>Almighy I Jah Rastafari King Haile Selassie I the First.Sellah<br>
+                                      Great and thunderable I Jah Rastafari King Haile Selassie I the first. Sillah !!!Give thanks and praises {{ name }}. We received your question and we shall respond as soon as we can,  as we have to do research based on your question. Marcus Mosiah Garvey John the baptist said "LOOK TO AFRICA {ETHIOPIA} THE CROWNING OF THE BLACK KING. HE SHALL BE OUR REDEEMER. Thank you for the heads up, Now I know I have learnt something new for the day and I shall learn everyday as long as you share with us.</textarea>
+                                                <label>
+                <span></span>
+                <select id="voiceOptions"></select>
+
+
+            </label>
+            <div class="button" onclick="speak();">speak</div>
+
+
+                More info  <button><a href="/pguest" >Continue</a></button>
+            </div>
+
+
+          <script type="text/javascript">
+
+              function checkCompatibility () {
+                  if(!('speechSynthesis' in window)){
+                       alert('Your browser is not supported. If google chrome, please upgrade!!!');
+
+                  }
+
+              };
+
+              checkCompatibility();
+              var voiceOptions = document.getElementById('voiceOptions');
+              var volumeSlider = document.getElementById('volumeSlider');
+              var rateSlider = document.getElementById('rateSlider');
+              var pitchSlider = document.getElementById('pitchSlider');
+              var myText = document.getElementById('myText');
+
+              var voiceMap = [];
+
+              function loadVoices () {
+                  var voices = speechSynthesis.getVoices();
+                  for (var i = 0; i < voices.length; i++) {
+                      var voice = voices[i];
+                      var option = document.createElement('option')
+                      option.value = voice.name;
+                      option.innerHTML = voice.name;
+                      voiceOptions.appendChild(option);
+                      voiceMap[voice.name] = voice;
+
+
+                  };
+              };
+
+              window.speechSynthesis.onvoiceschanged = function(e) {
+                  loadVoices();
+              };
+
+              function speak () {
+                  var msg = new SpeechSynthesisUtterance();
+
+                  msg.text = myText.value;
+                  window.speechSynthesis.speak(msg);
+
+              };
+          </script>
+      </body>
+</html>
+
+
+

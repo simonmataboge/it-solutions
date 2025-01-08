@@ -73,6 +73,12 @@
         
 	}
 }
+@media screen and (max-width:400px ){
+	.socials{
+      margin-top: 20px;
+        
+	}
+}
 .socials a
 {
     color:lime ;

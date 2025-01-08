@@ -675,9 +675,18 @@ tbody th
     display: inline-block;
 
 }
+@media screen and (max-width:1000px ){
+	.logof{
+       margin-left:20px;
+		width: 200px;
+        
+        
+	}
+}
 @media screen and (max-width:400px ){
 	.logof{
-       margin-left:50px;
+       margin-left:20px;
+		width: 200px;
         
         
 	}
